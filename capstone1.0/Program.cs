@@ -42,7 +42,7 @@ namespace capstone1._0
         private static string toPigLatin(string sentence)
         {
             const string vowels = "AEIOUaeio";
-            List<string> pigWords = new List<string>();
+            List<string> pigLWords = new List<string>();
 
             foreach (string word in sentence.Split(' '))
             {
@@ -52,14 +52,14 @@ namespace capstone1._0
 
                 if (currentLetter == -1)
                 {
-                    pigWords.Add(restOfWord + firstLetter + "ay");
+                    pigLWords.Add(restOfWord + firstLetter + "ay");
                 }
                 else
                 {
-                    pigWords.Add(word + "way");
+                    pigLWords.Add(word + "way");
                 }
             }
-            return string.Join(" ", pigWords);
+            return string.Join(" ", pigLWords);
         }
     }
 }
